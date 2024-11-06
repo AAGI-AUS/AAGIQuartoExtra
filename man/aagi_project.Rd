@@ -6,6 +6,14 @@
 \usage{
 aagi_project(path, ...)
 }
+\arguments{
+\item{path}{Path to save the new project}
+
+\item{...}{Additional arguments}
+}
+\value{
+A new AAGI project
+}
 \description{
 Create a new AAGI project with the following structure:
 }
@@ -18,9 +26,4 @@ Create a new AAGI project with the following structure:
 \item{A \code{pyenv} directory if \code{python_venv} is \code{TRUE}}
 \item{A \code{renv} directory if \code{with_renv} is \code{TRUE}}
 }
-
-@param path Path to save the new project
-@param ... Additional arguments
-
-@return A new AAGI project
 }

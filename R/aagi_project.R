@@ -11,10 +11,10 @@
 #'  \item{A `renv` directory if `with_renv` is `TRUE`}
 #'  }
 #'
-#'  @param path Path to save the new project
-#'  @param ... Additional arguments
+#' @param path Path to save the new project
+#' @param ... Additional arguments
 #'
-#'  @return A new AAGI project
+#' @return A new AAGI project
 aagi_project <- function(path, ...) {
 
   dots <- list(...)
