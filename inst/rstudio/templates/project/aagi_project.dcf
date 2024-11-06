@@ -1,0 +1,29 @@
+Binding: aagi_project
+Title: AAGI Project
+OpenFiles: index.qmd
+Icon: aagi.png
+
+Parameter: with_renv
+Widget: CheckboxInput
+Label: Use renv
+Default: Off
+Position: left
+
+Parameter: python_venv
+Widget: CheckboxInput
+Label: Python venv
+Default: Off
+Position: left
+
+Parameter: partner
+Widget: SelectInput
+Label: University partner
+Fields: UA, CU, UQ
+Default: UQ
+Position: right
+
+Parameter: doc_type
+Widget: SelectInput
+Label: Document type
+Fields: manuscript, uq-appendix, aagi
+Position: right

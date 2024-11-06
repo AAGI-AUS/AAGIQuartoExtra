@@ -1,0 +1,141 @@
+---
+# ======================= USER INPUT SECTION ============================
+# Modify the following fields as needed
+
+# General Information
+report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-UA)"  # Report series name
+
+# Document Title and Subtitle
+title: "Informative Title for Report"        # Main title of the report
+subtitle: "Report for \\<Project Number\\>"  # Subtitle, modify as required
+
+# Author Information
+author:                                      # List of authors
+  - "**Your Name**"   # Surround with ** to bold
+  - "Name 2"
+  - "Name 3"
+email: "your.email@adelaide.edu.au"          # Contact email for the primary author(s)
+
+# Additional Display Options
+lot: false                                   # List of Tables (true/false)
+lof: true                                    # List of Figures (true/false)
+pagebreak-before-h1: true                    # Pagebreak before level 1 headings (true/false)
+partner-logo: "_extensions/aagi/assets/AAGI_logo.pdf"  # Path to the partner logo (PDF version)
+bibliography: references.bib                 # Path to bibliography file
+
+# ===================== END OF USER INPUT SECTION ========================
+
+# ====================== INTERNAL SETTINGS ===============================
+# Do not modify the following fields; required for consistent formatting
+
+# Automatic date generation
+date: today                                  # Auto-generate date
+date-format: long                            # Full date format (e.g., "October 2, 2024")
+
+# Formatting Output
+format:                                      # Output formats supported by the template
+  aagi-pdf: default                          # PDF formatting using custom style
+  aagi-docx: default                         # DOCX formatting using custom style
+---
+
+# Executive Summary {.unnumbered}
+
+Executive summary goes here. Summarise the work that was provided by AAGI and the main results. (Try to limit this to a single page.)
+
+# Introduction
+
+The report body text goes here. The section titles are provided as a guide and for consistency across reports [@ggplot2], but feel free to modify them if they are not relevant or if using a different set of titles enhances the readability of your report. Use theme colours for emphasis if you like (\textcolor{AAGIblue}{AAGI blue: \#00808b}, \textcolor{AAGIgreen}{AAGI green: \#b6d438}, \textcolor{AAGIblack}{AAGI black: \#414042}).
+
+In this Introduction section, outline the goals of the research project and any necessary background to provide contexts and rationale for the research/work.
+
+## This is a subsection
+
+Use subsections (and subsubsections) as much as you like to help structure your content.
+
+### This is a subsubsection
+
+# Trial design
+
+Include the trial layout, type, and the experimental design, such as treatments, number of replicates, blocking, etc. Include graphics and pictures where useful.
+
+Make sure to include notes about any specific considerations that must be kept in mind for the type of trial (e.g., small plots, glasshouse experiments, genetics, breeding trials, OFE projects, bioinformatics projects, and so on).
+
+# Exploratory data analysis
+
+You can use a dedicated section here for the preliminary data exploration and dataset visualisation. This can be useful to aid in the interpretation of the data and graphs generated throughout the work, as well as for providing a rationale for the statistical methodologies used.
+
+# Methods
+
+Use this section to include a detailed description of the procedures and methodologies used for the analysis. Include versions/commits on developed pipelines, code scripts, and input/output details as relevant.
+
+Detail also the approach taken for the data analysis work here (or in a separate section [@Monteith1977]).
+
+# Results and discussion
+
+Include all of the results of the analytical work, and discuss the findings and their implications with respect to the research question.
+
+Example R code for generating @fig-example1.
+
+```{r example1}
+#| fig.cap: "Example plot"
+#| label: fig-example1
+plot(pressure)
+```
+
+# Datasets and metadata
+
+(Optional) Where useful, include descriptions of the datasets relevant to this research, including links and DOIs to enable findability of these datasets. (Often for GRDC projects these will have associated metadata entries in the GRDC Data Catalogue, which can be linked where appropriate.)
+
+Where you have publicly available code on GitHub associated with the analytics (e.g., pipelines), you can include git commit numbers and tags. Including md5/sha256 checksums for input data and outputs is also useful for research reproducibility.
+
+# Trial location maps
+
+(Optional) Include if relevant to the project.
+
+# References
+
+Include a bibliography of cited works and literature at the end.
+
+::: {#refs}
+:::
+
+\aagiappendix
+
+# This is an appendix
+
+Include Appendices at the end of the report as necessary, to contain any additional supporting information of interest.
+
+```{r, echo=TRUE, results='asis', eval=FALSE}
+# Here a sample R code chunk demonstrating how to include R code in the doc.
+# The following code simulates data and performs a linear regression.
+
+# Load necessary libraries
+library(ggplot2)
+
+# Simulate some data
+set.seed(123)
+n <- 100
+x <- rnorm(n)
+y <- 2 * x + rnorm(n)
+
+# Create a data frame
+data <- data.frame(x = x, y = y)
+
+# Fit a linear model
+model <- lm(y ~ x, data = data)
+
+# Summary of the model
+summary(model)
+
+# Plot the data and the fitted regression line
+ggplot(data, aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = "lm", color = "blue") +
+  labs(title = "Scatter Plot with Regression Line",
+       x = "Predictor (x)",
+       y = "Response (y)")
+```
+
+# This is another appendix
+
+Include as many appendices as you like.

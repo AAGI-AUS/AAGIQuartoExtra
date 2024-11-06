@@ -1,0 +1,62 @@
+# ========================= TEMPLATE METADATA =============================
+# General metadata about the template, including title, author, and version.
+title: Aagi                                   # Title of the template
+author: Javier A. Fernandez                   # Author or maintainer of the template
+version: 1.0.0                                # Version number of the template
+quarto-required: ">=1.4.0"                    # Minimum required Quarto version
+
+# ======================== FORMATS & CONFIGURATION ========================
+# Contributes section configures specific formats (pdf, docx) for the template.
+contributes:
+  formats:
+    # ----------------------- PDF CONFIGURATION ---------------------------
+    pdf:
+      documentclass: article                   # Document class (e.g., article, report)
+      toc: true                                # Table of Contents (TOC) enabled (true/false)
+      toc-depth: 3                             # Depth of the TOC, indicating how many levels to include
+      toc-title: Contents                      # Custom title for the TOC
+
+      # Color Settings for Links and TOC
+      linkcolor: "AAGI"                        # Color for internal links (use defined colors)
+      filecolor: "AAGI"                        # Color for file links
+      citecolor: "AAGI"                        # Color for citations
+      urlcolor: "AAGI"                         # Color for URLs
+      toccolor: "black"                        # Color of TOC titles
+
+      # PDF Rendering Options
+      keep-tex: false                          # Keep the .tex file (useful for debugging)
+      number-sections: true                    # Number sections in the document
+      pdf-engine: xelatex                      # PDF engine used for rendering
+
+      # Layout and Formatting
+      papersize: letter                        # Paper size (e.g., letter, a4)
+      fontsize: 11pt                           # Default font size (e.g., 11pt, 12pt)
+      geometry: margin=1in                     # Page geometry settings (margins)
+
+      # Figure Layout Options
+      fig-height: 4                            # Default figure height
+      fig-width: 7.5                           # Default figure width
+
+      # Additional Styling Options
+      colorlinks: true                         # Enable colored links (true/false)
+      block-headings: false                    # Disable block headings (useful for titlesec compatibility)
+
+      # LaTeX and Template Customizations
+      include-in-header: header.tex            # Include LaTeX header file
+      template-partials:                       # Specify partials to be included in template
+        #- "partials/title.tex"                # Uncomment if title.tex is required
+        - "partials/before-body.tex"
+        - "partials/toc.tex"
+        - "partials/after-body.tex"
+
+    # ----------------------- DOCX CONFIGURATION --------------------------
+    docx:
+      reference-doc: assets/template.docx       # Reference DOCX file for formatting
+      toc: true                                 # Enable table of contents (true/false)
+      number-sections: true                     # Number sections in the document
+
+      # Custom Filters for the DOCX Format
+      filters:                                  # Specify Lua filters for modifications
+        - filters/insert-titles.lua             # Filter to insert title and report series
+        - filters/insert-email.lua              # Filter to insert author email addresses
+        - filters/pagebreak-before-h1.lua       # Filter to insert page breaks before H1 headings
