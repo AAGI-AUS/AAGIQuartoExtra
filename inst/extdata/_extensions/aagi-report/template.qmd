@@ -34,8 +34,8 @@ date-format: long                            # Full date format (e.g., "October 
 
 # Formatting Output
 format:                                      # Output formats supported by the template
-  aagi-pdf: default                          # PDF formatting using custom style
-  aagi-docx: default                         # DOCX formatting using custom style
+  aagi-report-pdf: default                          # PDF formatting using custom style
+  aagi-report-docx: default                         # DOCX formatting using custom style
 ---
 
 # Executive Summary {.unnumbered}
