@@ -19,11 +19,12 @@ Parameter: partner
 Widget: SelectInput
 Label: University partner
 Fields: UA, CU, UQ
-Default: UQ
+Default: UA
 Position: right
 
 Parameter: doc_type
 Widget: SelectInput
 Label: Document type
-Fields: manuscript, uq-appendix, aagi
+Fields: aagi-report, aagi-short-report, aagi-presentation
+Default: aagi-report
 Position: right

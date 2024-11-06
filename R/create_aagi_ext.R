@@ -13,7 +13,7 @@
 #' @return a message if extension was successfully copied over
 #' @export
 create_aagi_ext <- function(file_name = NULL,
-                            ext_name = "aagi",
+                            ext_name = "aagi-report",
                             university = "UA",
                             path = path) {
   ext_dir <- fs::path(path, "_extensions")

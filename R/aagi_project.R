@@ -30,7 +30,7 @@ aagi_project <- function(path, ...) {
   quarto_yml_content <- paste0("project:\n  title: \"", file, "\"\n")
   writeLines(quarto_yml_content, con = file.path(path, "_quarto.yml"))
 
-  # Create index.qmd file
+  # Create index.qmd file and import extension template
   AAGIQuartoExtra::create_aagi_ext(file_name = "index",
                                 ext_name = dots$doc_type,
                                 university = dots$partner,

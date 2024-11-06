@@ -20,7 +20,7 @@ email: "your.email@adelaide.edu.au"          # Contact email for the primary aut
 lot: false                                   # List of Tables (true/false)
 lof: true                                    # List of Figures (true/false)
 pagebreak-before-h1: true                    # Pagebreak before level 1 headings (true/false)
-partner-logo: "_extensions/aagi/assets/AAGI_logo.pdf"  # Path to the partner logo (PDF version)
+partner-logo: #"_extensions/aagi-report/assets/AAGI_logo.pdf"  # Path to the partner logo (PDF version)
 bibliography: references.bib                 # Path to bibliography file
 
 # ===================== END OF USER INPUT SECTION ========================

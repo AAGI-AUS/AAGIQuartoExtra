@@ -1,6 +1,6 @@
 # ========================= TEMPLATE METADATA =============================
 # General metadata about the template, including title, author, and version.
-title: Aagi                                   # Title of the template
+title: Aagi-report                            # Title of the template
 author: Javier A. Fernandez                   # Author or maintainer of the template
 version: 1.0.0                                # Version number of the template
 quarto-required: ">=1.4.0"                    # Minimum required Quarto version
@@ -44,10 +44,8 @@ contributes:
       # LaTeX and Template Customizations
       include-in-header: header.tex            # Include LaTeX header file
       template-partials:                       # Specify partials to be included in template
-        #- "partials/title.tex"                # Uncomment if title.tex is required
         - "partials/before-body.tex"
         - "partials/toc.tex"
-        - "partials/after-body.tex"
 
     # ----------------------- DOCX CONFIGURATION --------------------------
     docx:
