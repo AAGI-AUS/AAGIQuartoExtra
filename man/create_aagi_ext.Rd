@@ -6,7 +6,7 @@
 \usage{
 create_aagi_ext(
   file_name = NULL,
-  ext_name = "aagi",
+  ext_name = "aagi-report",
   university = "UA",
   path = path
 )
