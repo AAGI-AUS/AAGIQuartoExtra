@@ -5,12 +5,9 @@
 
 <!-- badges: start -->
 
-[![Project Status: Active – The project has reached a stable, usable
-state and is being actively
-developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-\[\![R-CMD-check\](<https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml/badge.svg>
+[![R-CMD-check](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of AAGIQuartoExtra is to make use of AAGI Quarto templates a
