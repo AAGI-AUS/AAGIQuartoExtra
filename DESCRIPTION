@@ -1,10 +1,10 @@
 Package: AAGIQuartoExtra
-Title: What the Package Does (One Line, Title Case)
+Title: Facilitates the Creation of AAGI Quarto Documents
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Javier A.", "Fernandez", , "j.fernandez@uq.edu.au", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4862-2461"))
+Description: Assists in the creation of AAGI Quarto documents by providing a set of functions that generates the document structure and style. The package is designed to work with Quarto which is an open-source document format that supports R Markdown and Jupyter Notebooks. The package provides functions to create the document structure, add sections, figures, tables, and references. It also provides functions to download the AAGI document style, including logos, fonts, and colours.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
