@@ -1,7 +1,7 @@
 #' Create new Quarto document from template
 #'
 #' Install bundled Quarto extensions into current working directory and create
-#' new qmd using skeleton documents. This function extends a function written by
+#' new qmd using skeleton documents. This function extends code functionality written by
 #' Thomas Mock: https://github.com/jthomasmock/octavo/blob/master/R/use_quarto_ext.R
 #' and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/
 #'
@@ -13,15 +13,15 @@
 #' @return a message if extension was successfully copied over
 #' @export
 create_aagi_ext <- function(file_name = NULL,
-                               ext_name = "manuscript",
-                               university = "UA",
-                               path = path) {
-
+                            ext_name = "aagi",
+                            university = "UA",
+                            path = path) {
   ext_dir <- fs::path(path, "_extensions")
   dir.create(ext_dir, recursive = TRUE, showWarnings = FALSE)
 
-  ext_yml <- readLines(system.file(paste0("extdata/_extensions/",ext_name,"/_extension.yml"),
-                                   package = "JAFtoolbox"))
+  ext_yml <- readLines(system.file(paste0("extdata/_extensions/", ext_name, "/_extension.yml"),
+    package = "AAGIQuartoExtra"
+  ))
 
   ext_ver <- gsub(
     x = ext_yml[grepl(x = ext_yml, pattern = "version:")],
@@ -36,30 +36,23 @@ create_aagi_ext <- function(file_name = NULL,
   )
 
   file.copy(
-    from = system.file(paste0("extdata/_extensions/", ext_name), package = "JAFtoolbox"),
+    from = system.file(paste0("extdata/_extensions/", ext_name), package = "AAGIQuartoExtra"),
     to = ext_dir,
     overwrite = TRUE,
     recursive = TRUE,
     copy.mode = TRUE
   )
 
-  n_files <- length(dir(paste0(ext_dir, "/",ext_name)))
+  n_files <- length(dir(paste0(ext_dir, "/", ext_name)))
 
-  if(n_files >= 2){
+  if (n_files >= 2) {
     message(paste(ext_nm, "v", ext_ver, "was installed to _extensions folder in current working directory."))
   } else {
     message("Extension appears not to have been created")
   }
 
-  # create new qmd report based on skeleton
-  # readLines(paste0(ext_dir,"/",ext_name,"/template.qmd")) |>
-  #   writeLines(text = _,
-  #              con = paste0(path, "/", file_name, ".qmd", collapse = ""))
-
-  # create new qmd report based on skeleton
   template_lines <- readLines(paste0(ext_dir, "/", ext_name, "/template.qmd"))
 
-  # conditionally modify the report-series line based on the selected university
   if (university == "UA") {
     template_lines <- gsub(
       "report-series: \".*\"",
@@ -95,7 +88,5 @@ create_aagi_ext <- function(file_name = NULL,
     )
   }
 
-  # write the modified content to the new index.qmd file
   writeLines(text = template_lines, con = paste0(path, "/", file_name, ".qmd"))
-
 }

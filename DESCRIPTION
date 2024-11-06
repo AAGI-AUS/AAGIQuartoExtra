@@ -11,3 +11,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 URL: https://github.com/jafernandez01/AAGIQuartoExtra
 BugReports: https://github.com/jafernandez01/AAGIQuartoExtra/issues
+Imports: 
+    fs
+Suggests: 
+    renv,
+    reticulate
