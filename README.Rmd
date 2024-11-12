@@ -16,27 +16,46 @@ knitr::opts_chunk$set(
 # AAGIQuartoExtra
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml)
+
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![R-CMD-check](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
-The goal of AAGIQuartoExtra is to make use of AAGI Quarto templates a bit easier.
-It provides convenience functions to create AAGI Quarto projects and update current projects with the most recent templates.
+The goal of AAGIQuartoExtra is to make use of AAGI Quarto templates a bit easier. It provides convenience functions to create AAGI Quarto projects and update current projects with the most recent templates.
 
 ## Installation
 
 You can install the development version of AAGIQuartoExtra from [GitHub](https://github.com/) with:
-      
+
 ``` r
 # install.packages("remotes")
 remotes::install_github("jafernandez01/AAGIQuartoExtra")
 ```
 
-## Example
+## Create a new AAGI quarto document
 
-This is a basic example which shows you how to create a new AAGI project:
+In RStudio, you can create a new AAGI Quarto document by clicking on `File -> New Project... -> New Directory -> AAGI Project`. This will create a new AAGI project with the basic structure and template files.
 
-```{r example}
-library(AAGIQuartoExtra)
-## basic example code
-```
+![](screenshots/create_project_step1.jpg)
+
+You will be prompted to enter the name of the project, the university partner, and , the type of document you want to create. The project will be created as a subdirectory in the specified working directory.
+
+If you are familiar with projects environments, you also have the options to set renv and python virtual environments in the project.
+
+![](screenshots/create_project_step2.jpg){width="374"}
+
+When your AAGI project is created, you will notice that the new `index.qmd` file is created with the title of the project. This is the main document where you will write your content. You will notice that it includes some example content to get you started.
+
+![](screenshots/create_project_step3.jpg)
+
+You can also open the `index.qmd` file in the Visual Editor by clicking on the `Visual` button in the RStudio toolbar. This will open the document in the Visual Editor where you can see a live preview of your document as you write.
+
+![](screenshots/create_project_step4.jpg)
+
+Now, to convert the `index.qmd` file to a PDF and Word document, you can click on `Build -> Render Project` in the RStudio toolbar. This will render the document to PDF and Word formats and save them in the project directory as `index.pdf` and `index.docx`.
+
+![](screenshots/create_project_step5.jpg)
+
+If everything is set up correctly, you should see the rendered PDF and Word documents in the project directory. You can open these files to see the final output of your document.
+
+![](screenshots/create_project_step6.jpg)
