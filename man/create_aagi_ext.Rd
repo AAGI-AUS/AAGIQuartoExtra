@@ -25,7 +25,5 @@ a message if extension was successfully copied over
 }
 \description{
 Install bundled Quarto extensions into current working directory and create
-new qmd using skeleton documents. This function extends code functionality written by
-Thomas Mock: https://github.com/jthomasmock/octavo/blob/master/R/use_quarto_ext.R
-and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/
+new qmd using skeleton documents.
 }
