@@ -47,7 +47,7 @@ When your AAGI project is created, you will notice that the new
 main document where you will write your content. You will notice that it
 includes some example content to get you started.
 
-![](screenshots/create_project_step3.jpg)
+![](screenshots/create_project_step3.png)
 
 You can also open the `index.qmd` file in the Visual Editor by clicking
 on the `Visual` button in the RStudio toolbar. This will open the
@@ -61,7 +61,7 @@ click on `Build -> Render Project` in the RStudio toolbar. This will
 render the document to PDF and Word formats and save them in the project
 directory as `index.pdf` and `index.docx`.
 
-![](screenshots/create_project_step5.jpg)
+![](screenshots/create_project_step5.png)
 
 If everything is set up correctly, you should see the rendered PDF and
 Word documents in the project directory. You can open these files to see
