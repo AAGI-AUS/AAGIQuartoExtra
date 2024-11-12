@@ -20,8 +20,8 @@ You can install the development version of AAGIQuartoExtra from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("jafernandez01/AAGIQuartoExtra")
+# install.packages("remotes")
+remotes::install_github("jafernandez01/AAGIQuartoExtra")
 ```
 
 ## Example
