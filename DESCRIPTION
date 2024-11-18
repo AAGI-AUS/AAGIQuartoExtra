@@ -5,7 +5,7 @@ Authors@R:
     person("Javier A.", "Fernandez", , "j.fernandez@uq.edu.au", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4862-2461"))
 Description: Assists in the creation of AAGI Quarto documents by providing a set of functions that generates the document structure and style. The package is designed to work with Quarto which is an open-source document format that supports R Markdown and Jupyter Notebooks. The package provides functions to create the document structure, add sections, figures, tables, and references. It also provides functions to download the AAGI document style, including logos, fonts, and colours.
-License: CC BY 4.0
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
