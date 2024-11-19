@@ -35,7 +35,7 @@ create a new AAGI project with the basic structure and template files.
 
 You will be prompted to enter the name of the project, the university
 partner, and the type of document you want to create (\**only
-**aagi-report** is available as of version 1.0.0*). The project will be
+**aagi-report** is available as of version 0.2.0*). The project will be
 created as a subdirectory in the specified working directory.
 
 If you are familiar with projects environments, you also have the
