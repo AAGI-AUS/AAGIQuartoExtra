@@ -3,4 +3,10 @@
 ^LICENSE\.md$
 ^README\.Rmd$
 ^\.github$
-^\screenshots$
+^\figures$
+^vignettes/articles/\.quarto$
+^vignettes/articles/*_files$
+^vignettes/articles$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
