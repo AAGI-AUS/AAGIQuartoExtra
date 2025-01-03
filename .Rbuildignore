@@ -4,3 +4,6 @@
 ^README\.Rmd$
 ^\.github$
 ^\screenshots$
+^vignettes/articles/\.quarto$
+^vignettes/articles/*_files$
+^vignettes/articles$
