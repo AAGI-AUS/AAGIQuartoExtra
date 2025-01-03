@@ -28,8 +28,3 @@ It should be possible to delete and regenerate this folder with the scripts in t
 \note{
 Folder structure inspired by Kathryn Destasio's best practices for R projects: https://kdestasio.github.io/post/r_best_practices/
 }
-\examples{
-# Create the folder structure in the current working directory
-setup_folders(".")
-
-}

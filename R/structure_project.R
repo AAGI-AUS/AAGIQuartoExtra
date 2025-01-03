@@ -17,10 +17,6 @@
 #'
 #' @note Folder structure inspired by Kathryn Destasio's best practices for R projects: https://kdestasio.github.io/post/r_best_practices/
 #'
-#' @examples
-#' # Create the folder structure in the current working directory
-#' setup_folders(".")
-#'
 #' @export
 setup_folders <- function(project_path = ".") {
 
@@ -67,10 +63,6 @@ setup_folders <- function(project_path = ".") {
 #' The function extracts the project name from the directory name and uses it to rename the `index.qmd` file.
 #' The new file name format is `01_projectname_outputtype.qmd`.
 #' The `_quarto.yml` file is updated with the output type and directory for the project.
-#'
-#' @examples
-#' # Rename the index.qmd file and update _quarto.yml for a project report
-#' setup_docs("Report")
 #'
 #' @export
 setup_docs <- function(output_type = "Report") {

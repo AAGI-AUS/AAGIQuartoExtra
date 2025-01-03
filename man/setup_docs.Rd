@@ -19,8 +19,3 @@ The function extracts the project name from the directory name and uses it to re
 The new file name format is \verb{01_projectname_outputtype.qmd}.
 The \verb{_quarto.yml} file is updated with the output type and directory for the project.
 }
-\examples{
-# Rename the index.qmd file and update _quarto.yml for a project report
-setup_docs("Report")
-
-}
