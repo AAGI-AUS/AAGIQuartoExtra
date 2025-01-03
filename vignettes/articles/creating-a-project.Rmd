@@ -1,11 +1,10 @@
 ---
 title: "Creating a project with AAGIQuartoExtra"
-knitr:
-  opts_chunk:
-    collapse: true
-    comment: '#>'
-    eval: false
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
 
 ## Introduction
 
@@ -58,7 +57,6 @@ We want to use structured projects that will help us understand how files are la
 Going back to our recently created project, we will first load the package using `library()` within the new project.
 
 ```{r}
-#| label: setup
 library(AAGIQuartoExtra)
 ```
 
