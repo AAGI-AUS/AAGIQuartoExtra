@@ -1,6 +1,5 @@
 Binding: aagi_project
 Title: AAGI Project
-OpenFiles: index.qmd
 Icon: aagi.png
 
 Parameter: with_renv
