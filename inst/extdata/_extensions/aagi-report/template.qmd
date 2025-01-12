@@ -77,7 +77,7 @@ Include all of the results of the analytical work, and discuss the findings and 
 ::: landscape-section
 Example R code for generating @fig-example1 in a landscape layout:
 
-```{r example1}
+```{r example1, echo=FALSE}
 #| fig.cap: "Example plot"
 #| label: fig-example1
 plot(pressure)
