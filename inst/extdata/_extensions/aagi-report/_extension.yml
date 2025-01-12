@@ -46,6 +46,8 @@ contributes:
       template-partials:                       # Specify partials to be included in template
         - "partials/before-body.tex"
         - "partials/toc.tex"
+      filters:                                 # Specify filters for modifications
+        - filters/landscape.lua                # Filter to enable landscape orientation
 
     # ----------------------- DOCX CONFIGURATION --------------------------
     docx:
@@ -58,3 +60,5 @@ contributes:
         - filters/insert-titles.lua             # Filter to insert title and report series
         - filters/insert-email.lua              # Filter to insert author email addresses
         - filters/pagebreak-before-h1.lua       # Filter to insert page breaks before H1 headings
+        - filters/landscape.lua                 # Filter to enable landscape orientation
+        - filters/apply-headers.lua             # Filter to apply headers to the doc when using section breaks
