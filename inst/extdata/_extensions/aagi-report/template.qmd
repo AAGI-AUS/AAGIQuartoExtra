@@ -74,13 +74,15 @@ Detail also the approach taken for the data analysis work here (or in a separate
 
 Include all of the results of the analytical work, and discuss the findings and their implications with respect to the research question.
 
-Example R code for generating @fig-example1.
+::: landscape-section
+Example R code for generating @fig-example1 in a landscape layout:
 
 ```{r example1}
 #| fig.cap: "Example plot"
 #| label: fig-example1
 plot(pressure)
 ```
+:::
 
 # Datasets and metadata
 
