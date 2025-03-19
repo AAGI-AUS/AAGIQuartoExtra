@@ -48,6 +48,7 @@ contributes:
         - "partials/toc.tex"
       filters:                                 # Specify filters for modifications
         - filters/landscape.lua                # Filter to enable landscape orientation
+        - filters/include-graphics-path.lua            # Filter to include graphics path
 
     # ----------------------- DOCX CONFIGURATION --------------------------
     docx:
