@@ -30,7 +30,7 @@ new_aagi_document <- function(file_name = NULL,
 
   if(!file.exists(paste0("_extensions/", ext_name)) || update) {
 
-    dir.create(paste0("_extensions/", ext_name))
+    dir.create(paste0("_extensions/", ext_name), recursive = TRUE, showWarnings = FALSE)
 
     file.copy(
       from = system.file(paste0("extdata/_extensions/", ext_name), package = "AAGIQuartoExtra"),
@@ -46,6 +46,10 @@ new_aagi_document <- function(file_name = NULL,
 
   if(n_files < 2){
     message("Extension appears not to have been created")
+  } else if (n_files >= 2 && update) {
+    message("Extension was updated successfully")
+  } else {
+    message("Extension appears installed in the '_extensions' folder")
   }
 
   template_lines <- readLines(paste0("_extensions/", ext_name, "/template.qmd"))
