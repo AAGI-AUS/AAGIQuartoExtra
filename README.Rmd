@@ -69,5 +69,5 @@ AAGIQuartoExtra::new_aagi_document()
 ```
 
 <p align="center">
-  <img src="media/videos/recording_new_aagi_document.gif" alt="Video">
+  <img src="man/figures/recording_new_aagi_document.gif" alt="Video">
 </p>
