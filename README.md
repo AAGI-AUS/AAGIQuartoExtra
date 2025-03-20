@@ -80,4 +80,6 @@ create a new AAGI Quarto document in the current working directory.
 AAGIQuartoExtra::new_aagi_document()
 ```
 
-![](https://raw.githubusercontent.com/jafernandez01/AAGIQuartoExtra/master/media/videos/recording_new_aagi_document.mp4)
+<p align="center">
+<img src="media/videos/recording_new_aagi_document.mp4" alt="Video">
+</p>

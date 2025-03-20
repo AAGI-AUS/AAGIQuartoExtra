@@ -68,4 +68,6 @@ You can also create a new AAGI Quarto document by running the `new_aagi_document
 AAGIQuartoExtra::new_aagi_document()
 ```
 
-![](https://raw.githubusercontent.com/jafernandez01/AAGIQuartoExtra/master/media/videos/recording_new_aagi_document.mp4)
+<p align="center">
+  <img src="media/videos/recording_new_aagi_document.mp4" alt="Video">
+</p>
