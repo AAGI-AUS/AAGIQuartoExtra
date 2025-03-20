@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">AAGIQuartoExtra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,7 +96,8 @@ partner, and the type of document you want to create (*<em>only
 project will be created as a subdirectory in the specified working
 directory.</p>
 <p>If you are familiar with projects environments, you also have the
-options to set renv and python virtual environments in the project.</p>
+options to set <code>renv</code> and python virtual environments in the
+project.</p>
 <p><img src="../reference/figures/create_project_step2.png" width="374"></p>
 <p>When your AAGI project is created, you will notice that the new
 <code>index.qmd</code> file is created with the title of the project.
@@ -118,14 +119,14 @@ organisation of the project files.</p>
 </h2>
 <p>When learning data analysis, it can be challenging to figure out how
 to organise files within the created project. It is good practice to
-establish a comprehensive file orgnisation structure that helps us to
+establish a comprehensive file organisation structure that helps us to
 navigate and re-use the project content without losing a huge amount of
 time searching across lines of codes and files.</p>
 <p>We want to use structured projects that will help us understand how
 files are laid out weeks or months after we’ve last worked on that
 project. One way is to create sub-folders for specific types of files,
 such as data, figures, function files, and documents. Using the
-<code><a href="../reference/setup_folders.html">setup_folders()</a></code> function can hepl create a standardized
+<code><a href="../reference/setup_folders.html">setup_folders()</a></code> function can help create a standardized
 folder hierarchy. This function organizes your project with the
 following folders:</p>
 <ul>
@@ -134,7 +135,7 @@ following folders:</p>
 (read-only).</li>
 <li>
 <strong>code</strong>: Contains R scripts for analysis and
-preprocessing.</li>
+pre-processing.</li>
 <li>
 <strong>figs</strong>: Stores generated plots, tables, or
 figures.</li>
@@ -151,13 +152,9 @@ functions).</li>
 <strong>admin</strong>: For administrative files like project
 timelines or meeting notes.</li>
 </ul>
-<p>Going back to our recently created project, we will first load the
-package using <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> within the new project.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jafernandez01/AAGIQuartoExtra" class="external-link">AAGIQuartoExtra</a></span><span class="op">)</span></span></code></pre></div>
 <p>To set up the proposed structure, just run:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/setup_folders.html">setup_folders</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">AAGIQuartoExtra</span><span class="fu">::</span><span class="fu"><a href="../reference/setup_folders.html">setup_folders</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>You will see that the function will create the directories in your
 project root. You are free to remove/modify/add folders depending on
 your project requirements.</p>
@@ -171,8 +168,8 @@ your project requirements.</p>
 <code>index.qmd</code> and <code>_quarto.yml</code> files by renaming
 and updating their configuration.</p>
 <p>To use this function, simply run:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/setup_docs.html">setup_docs</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">AAGIQuartoExtra</span><span class="fu">::</span><span class="fu"><a href="../reference/setup_docs.html">setup_docs</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>For instance, let’s say we are working on a Wheat Nitrogen Response
 research project. The created project has been named
 <code>res_WheatNitrogenResponse</code>, so running the
@@ -182,10 +179,10 @@ research project. The created project has been named
 <code>01_WheatNitrogenResponse_Report.qmd</code>.</li>
 <li>Add the following entry to the <code>_quarto.yml</code> file:</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"res_WheatNitrogenResponse"</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> doc</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"res_WheatNitrogenResponse"</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> doc</span></span></code></pre></div>
 <p>Now, clicking on <code>Build -&gt; Render Project</code> in the
 RStudio toolbar will render the document to PDF and Word formats and
 save them in the <code>/doc</code> directory as
@@ -215,8 +212,8 @@ in ISO 8601 (YYYY-MM-DD).</p>
 not installed and you render any document, the package will fall back to
 Arial font.</p>
 <p>If you want to check if this font is installed, use:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/check_proxima_nova_installed.html">check_proxima_nova_installed</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">AAGIQuartoExtra</span><span class="fu">::</span><span class="fu"><a href="../reference/check_fonts.html">check_fonts</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="downloading-proxima-nova-fonts">Downloading Proxima Nova Fonts<a class="anchor" aria-label="anchor" href="#downloading-proxima-nova-fonts"></a>
@@ -234,8 +231,8 @@ directory within your project.</li>
 <code><a href="../reference/setup_github_pat.html">setup_github_pat()</a></code> to ensure you have the correct
 permissions to download from the repository. Run the following command
 to download the fonts:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/download_fonts.html">download_fonts</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">AAGIQuartoExtra</span><span class="fu">::</span><span class="fu"><a href="../reference/download_fonts.html">download_fonts</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>If the fonts are downloaded successfully, the template will from now
 use Proxima Nova. If the download fails or the font is unavailable,
 Arial will continue to be used as the fallback.</p>
@@ -252,11 +249,11 @@ for your project:</p>
 <li>Open your R session and navigate to your project directory.</li>
 <li>Run the following commands:</li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_git</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>This initializes a Git repository in your project directory.</p>
 <p>To connect your project to a private GitHub repository, run:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># If creating a GitHub repository in your personal account</span></span>
 <span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_github</span><span class="op">(</span>private <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
