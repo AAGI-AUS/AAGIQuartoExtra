@@ -1,6 +1,6 @@
 Package: AAGIQuartoExtra
 Title: Facilitates the Creation of AAGI Quarto Documents
-Version: 0.5.0
+Version: 0.5.1
 Authors@R: 
     person("Javier A.", "Fernandez", , "j.fernandez@uq.edu.au", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4862-2461"))
