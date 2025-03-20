@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   articles/creating-a-project: creating-a-project.html
-last_built: 2025-03-20T06:06Z
+last_built: 2025-03-20T06:42Z
 urls:
   reference: https://jafernandez01.github.io/AAGIQuartoExtra/reference
   article: https://jafernandez01.github.io/AAGIQuartoExtra/articles
