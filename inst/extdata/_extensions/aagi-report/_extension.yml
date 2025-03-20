@@ -2,7 +2,7 @@
 # General metadata about the template, including title, author, and version.
 title: Aagi-report                            # Title of the template
 author: Javier A. Fernandez                   # Author or maintainer of the template
-version: 1.0.0                                # Version number of the template
+version: 0.4.0                                # Version number of the template
 quarto-required: ">=1.4.0"                    # Minimum required Quarto version
 
 # ======================== FORMATS & CONFIGURATION ========================

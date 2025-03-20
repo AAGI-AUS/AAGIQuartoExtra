@@ -1,7 +1,9 @@
-#' Create new Quarto document from template
+#' Create new AAGI Quarto project from template
 #'
 #' Install bundled Quarto extensions into current working directory and create
-#' new qmd using skeleton documents.
+#' new qmd using skeleton documents. This function extends a function written by
+#' Thomas Mock: https://github.com/jthomasmock/octavo/blob/master/R/use_quarto_ext.R
+#' and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/
 #'
 #' @param file_name Name of new qmd file and sub-directory to be created
 #' @param ext_name String indicating which extension to install
@@ -15,7 +17,7 @@ create_aagi_ext <- function(file_name = NULL,
                             university = "UA",
                             path = path) {
   ext_dir <- fs::path(path, "_extensions")
-  dir.create(ext_dir, recursive = TRUE, showWarnings = FALSE)
+  if(!file.exists(ext_dir)) dir.create(ext_dir, recursive = TRUE, showWarnings = FALSE)
 
   ext_yml <- readLines(system.file(paste0("extdata/_extensions/", ext_name, "/_extension.yml"),
     package = "AAGIQuartoExtra"

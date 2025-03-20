@@ -3,5 +3,6 @@
 export(check_fonts)
 export(create_aagi_ext)
 export(download_fonts)
+export(new_aagi_document)
 export(setup_docs)
 export(setup_folders)
