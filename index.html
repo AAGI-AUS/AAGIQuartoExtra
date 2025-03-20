@@ -67,21 +67,29 @@
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"jafernandez01/AAGIQuartoExtra"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="create-a-new-aagi-quarto-document">Create a new AAGI quarto document<a class="anchor" aria-label="anchor" href="#create-a-new-aagi-quarto-document"></a>
+<h2 id="create-a-new-aagi-quarto-project">Create a new AAGI quarto project<a class="anchor" aria-label="anchor" href="#create-a-new-aagi-quarto-project"></a>
 </h2>
 <p>In RStudio, you can create a new AAGI Quarto document by clicking on <code>File -&gt; New Project... -&gt; New Directory -&gt; AAGI Project</code>. This will create a new AAGI project with the basic structure and template files.</p>
-<p><img src="reference/figures/create_project_step1.png"></p>
+<p><img src="media/figures/create_project_step1.png"></p>
 <p>You will be prompted to enter the name of the project, the university partner, and the type of document you want to create (*<em>only <strong>aagi-report</strong> is available as of version 0.2.0</em>). The project will be created as a subdirectory in the specified working directory.</p>
 <p>If you are familiar with projects environments, you also have the options to set renv and python virtual environments in the project.</p>
-<p><img src="reference/figures/create_project_step2.png" width="374"></p>
+<p><img src="media/figures/create_project_step2.png" width="374"></p>
 <p>When your AAGI project is created, you will notice that the new <code>index.qmd</code> file is created with the title of the project. This is the main document where you will write your content. You will notice that it includes some example content to get you started.</p>
-<p><img src="reference/figures/create_project_step3.png"></p>
+<p><img src="media/figures/create_project_step3.png"></p>
 <p>You can also open the <code>index.qmd</code> file in the Visual Editor by clicking on the <code>Visual</code> button in the RStudio toolbar. This will open the document in the Visual Editor where you can see a live preview of your document as you write.</p>
-<p><img src="reference/figures/create_project_step4.png"></p>
+<p><img src="media/figures/create_project_step4.png"></p>
 <p>Now, to convert the <code>index.qmd</code> file to a PDF and Word document, you can click on <code>Build -&gt; Render Project</code> in the RStudio toolbar. This will render the document to PDF and Word formats and save them in the project directory as <code>index.pdf</code> and <code>index.docx</code>.</p>
-<p><img src="reference/figures/create_project_step5.png"></p>
+<p><img src="media/figures/create_project_step5.png"></p>
 <p>If everything is set up correctly, you should see the rendered PDF and Word documents in the project directory. You can open these files to see the final output of your document.</p>
-<p><img src="reference/figures/create_project_step6.png"></p>
+<p><img src="media/figures/create_project_step6.png"></p>
+</div>
+<div class="section level2">
+<h2 id="create-a-new-aagi-quarto-document">Create a new AAGI quarto document<a class="anchor" aria-label="anchor" href="#create-a-new-aagi-quarto-document"></a>
+</h2>
+<p>You can also create a new AAGI Quarto document by running the <code><a href="reference/new_aagi_document.html">new_aagi_document()</a></code> function in the R console. This function will create a new AAGI Quarto document in the current working directory.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">AAGIQuartoExtra</span><span class="fu">::</span><span class="fu"><a href="reference/new_aagi_document.html">new_aagi_document</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><video src="https://raw.githubusercontent.com/jafernandez01/AAGIQuartoExtra/master/media/videos/recording_new_aagi_document.mp4" controls=""><a href="https://raw.githubusercontent.com/jafernandez01/AAGIQuartoExtra/master/media/videos/recording_new_aagi_document.mp4" class="external-link">Video</a></video></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
