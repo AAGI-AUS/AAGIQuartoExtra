@@ -8,7 +8,7 @@ create_aagi_ext(
   file_name = NULL,
   ext_name = "aagi-report",
   university = "UA",
-  path = path
+  path = "."
 )
 }
 \arguments{
@@ -27,5 +27,6 @@ a message if extension was successfully copied over
 Install bundled Quarto extensions into current working directory and create
 new qmd using skeleton documents. This function extends a function written by
 Thomas Mock: https://github.com/jthomasmock/octavo/blob/master/R/use_quarto_ext.R
-and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/
+and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/.
+This is equivalent to the quarto command \verb{quarto use} with a \code{--template} flag.
 }

@@ -3,7 +3,8 @@
 #' Install bundled Quarto extensions into current working directory and create
 #' new qmd using skeleton documents. This function extends a function written by
 #' Thomas Mock: https://github.com/jthomasmock/octavo/blob/master/R/use_quarto_ext.R
-#' and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/
+#' and by Spencer Schien: https://spencerschien.info/post/r_for_nonprofits/quarto_template/.
+#' This is equivalent to the quarto command `quarto use` with a `--template` flag.
 #'
 #' @param file_name Name of new qmd file and sub-directory to be created
 #' @param ext_name String indicating which extension to install
@@ -15,7 +16,12 @@
 create_aagi_ext <- function(file_name = NULL,
                             ext_name = "aagi-report",
                             university = "UA",
-                            path = path) {
+                            path = ".") {
+
+  if (is.null(file_name)) {
+    stop("You must provide a valid file_name")
+  }
+
   ext_dir <- fs::path(path, "_extensions")
   if(!file.exists(ext_dir)) dir.create(ext_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -23,17 +29,17 @@ create_aagi_ext <- function(file_name = NULL,
     package = "AAGIQuartoExtra"
   ))
 
-  ext_ver <- gsub(
+  ext_ver <- trimws(gsub(
     x = ext_yml[grepl(x = ext_yml, pattern = "version:")],
-    pattern = "version: ",
-    replacement = ""
-  )
+    pattern = "version: ([^#]*)#?.*",
+    replacement = "\\1"
+  ))
 
-  ext_nm <- gsub(
-    x = ext_yml[grepl(x = ext_yml, pattern = "title:")],
-    pattern = "title: ",
-    replacement = ""
-  )
+  ext_nm <- trimws(gsub(
+    x = ext_yml[grepl(x = ext_yml, pattern = "^title:")],  # Match only lines starting with "title:"
+    pattern = "title: ([^#]*)#?.*",
+    replacement = "\\1"
+  ))
 
   file.copy(
     from = system.file(paste0("extdata/_extensions/", ext_name), package = "AAGIQuartoExtra"),
@@ -46,7 +52,7 @@ create_aagi_ext <- function(file_name = NULL,
   n_files <- length(dir(paste0(ext_dir, "/", ext_name)))
 
   if (n_files >= 2) {
-    message(paste(ext_nm, "v", ext_ver, "was installed to _extensions folder in current working directory."))
+    message(paste0(ext_nm, " (v", ext_ver,") ", "was installed to _extensions folder in project path"))
   } else {
     message("Extension appears not to have been created")
   }

@@ -23,8 +23,10 @@ new_aagi_document <- function(file_name = NULL,
 
   stopifnot("Extension not in package" = ext_name %in% c("aagi-report"))
 
-  if(!file.exists("_extensions")) dir.create("_extensions")
-  message("Created '_extensions' folder")
+  if(!file.exists("_extensions")) {
+    dir.create("_extensions")
+    message("Created '_extensions' folder")
+  }
 
   if(!file.exists(paste0("_extensions/", ext_name)) || update) {
 
@@ -42,9 +44,7 @@ new_aagi_document <- function(file_name = NULL,
 
   n_files <- length(dir(paste0("_extensions/", ext_name)))
 
-  if(n_files >= 2){
-    message(paste(ext_name, "was installed to _extensions folder in current working directory."))
-  } else {
+  if(n_files < 2){
     message("Extension appears not to have been created")
   }
 
@@ -87,5 +87,5 @@ new_aagi_document <- function(file_name = NULL,
 
   writeLines(text = template_lines, con = paste0(file_name, ".qmd", collapse = ""))
 
-  utils::file.edit(paste0(file_name, ".qmd", collapse = ""))
+  file.show(paste0(file_name, ".qmd", collapse = ""))
 }
