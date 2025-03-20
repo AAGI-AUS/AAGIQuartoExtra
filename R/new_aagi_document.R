@@ -91,5 +91,5 @@ new_aagi_document <- function(file_name = NULL,
 
   writeLines(text = template_lines, con = paste0(file_name, ".qmd", collapse = ""))
 
-  file.show(paste0(file_name, ".qmd", collapse = ""))
+  rstudioapi::navigateToFile(paste0(file_name, ".qmd", collapse = ""))
 }

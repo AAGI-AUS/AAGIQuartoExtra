@@ -13,7 +13,8 @@ URL: https://github.com/jafernandez01/AAGIQuartoExtra, https://jafernandez01.git
 BugReports: https://github.com/jafernandez01/AAGIQuartoExtra/issues
 Imports: 
     fs,
-    remotes
+    remotes,
+    rstudioapi
 Suggests: 
     renv,
     reticulate,
