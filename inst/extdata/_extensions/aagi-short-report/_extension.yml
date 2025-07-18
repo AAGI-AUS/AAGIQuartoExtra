@@ -1,0 +1,30 @@
+# ========================= TEMPLATE METADATA =============================
+# General metadata about the template, including title, author, and version.
+title: AAGI-short-report
+author: Adam H. Sparks, James J Balamuta, Russel Edson, Vinh Thiem Ma, Rose Megirian, Zhanglong Cao, Sam Rogers, Julian Taylor 
+# Adapted by Javier A. Fernandez to the AAGIQuartoExtra package
+version: 1.0.1
+quarto-required: ">=1.4.0"
+
+# ======================== FORMATS & CONFIGURATION ========================
+# Contributes section configures specific formats (pdf, docx) for the template.
+contributes:
+  formats:
+    # ----------------------- PDF CONFIGURATION ---------------------------
+    pdf:
+      # PDF Rendering Options
+      keep-tex: false                          # Keep the .tex file (useful for debugging)
+      pdf-engine: xelatex                      # PDF engine used for rendering
+      
+      # Additional Styling Options
+      link-citations: true
+      
+      # LaTeX and Template Customizations
+      template: header.tex            # Include LaTeX header file
+      csl: assets/biometrics.csl               # Citation Style Language (CSL) file for bibliography formatting
+      filters:                                 # Specify filters for modifications
+        - filters/include-graphics-path.lua            # Filter to include graphics path
+        
+    # ----------------------- DOCX CONFIGURATION --------------------------
+    docx:
+      reference-doc: assets/template.docx       # Reference DOCX file for formatting
