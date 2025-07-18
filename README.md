@@ -34,9 +34,10 @@ create a new AAGI project with the basic structure and template files.
 ![](man/figures/create_project_step1.png)
 
 You will be prompted to enter the name of the project, the university
-partner, and the type of document you want to create (\**only
-**aagi-report** is available as of version 0.2.0*). The project will be
-created as a subdirectory in the specified working directory.
+partner, and the type of document you want to create (\***aagi-report**
+*and **aagi-short-report** are available as of latest release version*).
+The project will be created as a subdirectory in the specified working
+directory.
 
 If you are familiar with projects environments, you also have the
 options to set renv and python virtual environments in the project.
