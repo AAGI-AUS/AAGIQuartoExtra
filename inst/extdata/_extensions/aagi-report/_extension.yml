@@ -63,3 +63,19 @@ contributes:
         - filters/pagebreak-before-h1.lua       # Filter to insert page breaks before H1 headings
         - filters/landscape.lua                 # Filter to enable landscape orientation
         - filters/apply-headers.lua             # Filter to apply headers to the doc when using section breaks
+    
+    # ----------------------- HTML CONFIGURATION --------------------------
+    html:
+      toc: true                                 # Enable table of contents
+      toc_depth: 5
+      toc-location: right                       # Position TOC on the right
+      toc-title: "Contents"                     # Title for the TOC
+      css: assets/aagi-styles.css
+      embed-resources: true
+      fig_align: center
+      include-before-body: partials/header.html  # Include HTML header with logo
+      template-partials:
+        - partials/title-block.html             # Custom title block with report series
+      filters:
+        - filters/insert-partners-logo.lua      # Insert Partners logo after title
+        - filters/add-author-email.lua          # Associate email with first author

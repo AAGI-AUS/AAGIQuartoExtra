@@ -1,0 +1,202 @@
+/* === Proxima Nova Font Face Definitions === */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova'), local('ProximaNova-Regular'), local('Proxima Nova Regular'),
+       url('../fonts/Proxima Nova Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), local('Proxima Nova Bold'),
+       url('../fonts/Proxima Nova Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Italic'), local('ProximaNova-Italic'), local('Proxima Nova Italic'),
+       url('../fonts/Proxima Nova Regular Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Bold Italic'), local('ProximaNova-BoldItalic'), local('Proxima Nova Bold Italic'),
+       url('../fonts/Proxima Nova Bold Italic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* === Font Stack Variable === */
+:root {
+  --aagi-font-stack: 'Proxima Nova', 'Arial', sans-serif;
+}
+
+h1.title {
+  font-family: var(--aagi-font-stack);
+  font-size: 21pt;
+  font-weight: bold;
+  color: #414042;
+  margin-top: 5px;
+}
+
+h4.report-series {
+  font-family: var(--aagi-font-stack);
+  font-size: 26pt;
+  font-weight: bold;
+  color: #00808b;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: var(--aagi-font-stack);
+  font-size: 20pt;
+  font-weight: bold;
+  color: #414042;
+  margin-top: 5px;
+}
+
+p.subtitle {
+  font-family: var(--aagi-font-stack);
+  font-size: 18pt;
+  color: #414042;
+  margin-top: 5px;
+}
+
+h2 {
+  font-family: var(--aagi-font-stack);
+  font-size: 18pt;
+  font-weight: bold;
+  color: #414042;
+}
+
+h3 {
+  font-family: var(--aagi-font-stack);
+  font-size: 16pt;
+  font-weight: bold;
+  color: #414042;
+}
+
+h4 {
+  font-family: var(--aagi-font-stack);
+  font-size: 14pt;
+  font-weight: bold;
+  color: #414042;
+}
+
+body {
+  font-family: var(--aagi-font-stack);
+  font-size: 13pt;
+  font-style: normal;
+  color: #414042;
+}
+
+/* TOC Positioning */
+#TOC {
+  position: fixed;
+  right: 0;
+  top: 100px; /* Position below the logo */
+  width: 250px;
+  padding: 10px;
+  background-color: transparent; /* Removed background */
+  border-left: 1px solid #ddd;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+/* TOC title styling */
+#TOC > h2,
+.sidebar-title {
+  font-family: var(--aagi-font-stack);
+  font-size: 18pt !important;
+  font-weight: bold !important;
+  color: var(--aagi-blue) !important;
+  margin-bottom: 15px;
+}
+
+/* Main content positioning */
+#quarto-content {
+  padding-right: 270px; /* Leave space for TOC */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* AAGI Color Styling for HTML UI Elements */
+/* Define AAGI colors */
+:root {
+  --aagi-blue: #00808b;
+  --aagi-blue-light: rgba(0, 128, 139, 0.1);
+  --aagi-blue-hover: rgba(0, 128, 139, 0.8);
+}
+
+/* Links */
+a {
+  color: var(--aagi-blue);
+}
+
+a:hover {
+  color: var(--aagi-blue-hover);
+}
+
+/* TOC active items */
+.sidebar-item-container .active {
+  color: var(--aagi-blue) !important;
+}
+
+#TOC .active {
+  color: var(--aagi-blue) !important;
+  border-left: 2px solid var(--aagi-blue);
+}
+
+/* Tab sets */
+.nav-tabs .nav-link.active {
+  color: white !important;
+  background-color: var(--aagi-blue) !important;
+  border-color: var(--aagi-blue) !important;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs .nav-link:not(.active) {
+  color: var(--aagi-blue) !important;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-bottom: 2px solid var(--aagi-blue);
+  background-color: var(--aagi-blue-light);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--aagi-blue) !important;
+  border-color: var(--aagi-blue) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--aagi-blue-hover) !important;
+  border-color: var(--aagi-blue-hover) !important;
+}
+
+/* Code blocks */
+pre {
+  border-left: 4px solid var(--aagi-blue);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--aagi-blue);
+}
+
+/* Table headers */
+thead {
+  background-color: var(--aagi-blue-light);
+}
+
+/* Selected text */
+::selection {
+  background-color: var(--aagi-blue-light);
+}
+
+
