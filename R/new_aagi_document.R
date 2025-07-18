@@ -21,7 +21,7 @@ new_aagi_document <- function(file_name = NULL,
     stop("You must provide a valid file_name")
   }
 
-  stopifnot("Extension not in package" = ext_name %in% c("aagi-report"))
+  stopifnot("Extension not in package" = ext_name %in% c("aagi-report", "aagi-short-report"))
 
   if(!file.exists("_extensions")) {
     dir.create("_extensions")
