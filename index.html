@@ -61,10 +61,30 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of AAGIQuartoExtra from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>AAGIQuartoExtra is available through the <a href="https://r-universe.dev/search" class="external-link">R-Universe</a> with pre-built binaries (this is the easy way).</p>
+<p>To get started:</p>
+<div class="section level3">
+<h3 id="enable-this-universe">Enable this universe<a class="anchor" aria-label="anchor" href="#enable-this-universe"></a>
+</h3>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"AAGI-AUS/AAGIQuartoExtra"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    aagi_aus <span class="op">=</span> <span class="st">'https://aagi-aus.r-universe.dev'</span>,</span>
+<span>    CRAN <span class="op">=</span> <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="install">Install<a class="anchor" aria-label="anchor" href="#install"></a>
+</h3>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"AAGIQuartoExtra"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="the-harder-way">The hard(er) way<a class="anchor" aria-label="anchor" href="#the-harder-way"></a>
+</h3>
+<p>You can install the development version of AAGIQuartoExtra from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://pak.r-lib.org/" class="external-link">"pak"</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"pak"</span><span class="op">)</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"AAGI-AUS/AAGIQuartoExtra"</span><span class="op">)</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="create-a-new-aagi-quarto-project">Create a new AAGI quarto project<a class="anchor" aria-label="anchor" href="#create-a-new-aagi-quarto-project"></a>
@@ -87,7 +107,7 @@
 <h2 id="create-a-new-aagi-quarto-document">Create a new AAGI quarto document<a class="anchor" aria-label="anchor" href="#create-a-new-aagi-quarto-document"></a>
 </h2>
 <p>You can also create a new AAGI Quarto document by running the <code><a href="reference/new_aagi_document.html">new_aagi_document()</a></code> function in the R console. This function will create a new AAGI Quarto document in the current working directory.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">AAGIQuartoExtra</span><span class="fu">::</span><span class="fu"><a href="reference/new_aagi_document.html">new_aagi_document</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p align="center">
 <img src="reference/figures/recording_new_aagi_document.gif" alt="Video"></p>
