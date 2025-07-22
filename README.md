@@ -17,12 +17,34 @@ projects and update current projects with the most recent templates.
 
 ## Installation
 
+AAGIQuartoExtra is available through the
+[R-Universe](https://r-universe.dev/search) with pre-built binaries
+(this is the easy way).
+
+To get started:
+
+### Enable this universe
+
+``` r
+options(repos = c(
+    aagi_aus = 'https://aagi-aus.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+```
+
+### Install
+
+``` r
+install.packages("AAGIQuartoExtra")
+```
+
+### The hard(er) way
+
 You can install the development version of AAGIQuartoExtra from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("AAGI-AUS/AAGIQuartoExtra")
+if (!require("pak")) install.packages("pak")
+pak::pak("AAGI-AUS/AAGIQuartoExtra")
 ```
 
 ## Create a new AAGI quarto project
