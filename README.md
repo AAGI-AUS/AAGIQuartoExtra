@@ -7,7 +7,7 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jafernandez01/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/AAGI-AUS/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/AAGI-AUS/AAGIQuartoExtra/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
@@ -22,7 +22,7 @@ You can install the development version of AAGIQuartoExtra from
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("jafernandez01/AAGIQuartoExtra")
+remotes::install_github("AAGI-AUS/AAGIQuartoExtra")
 ```
 
 ## Create a new AAGI quarto project
@@ -82,5 +82,6 @@ AAGIQuartoExtra::new_aagi_document()
 ```
 
 <p align="center">
+
 <img src="man/figures/recording_new_aagi_document.gif" alt="Video">
 </p>
