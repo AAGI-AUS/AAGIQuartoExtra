@@ -12,39 +12,48 @@
 #' @param update Logical indicating whether to update the extension if it already exists
 #'
 #' @export
-new_aagi_document <- function(file_name = NULL,
-                              ext_name = "aagi-report",
-                              university = "UQ",
-                              update = FALSE) {
-
+new_aagi_document <- function(
+  file_name = NULL,
+  ext_name = "aagi-report",
+  university = "UQ",
+  update = FALSE
+) {
   if (is.null(file_name)) {
     stop("You must provide a valid file_name")
   }
 
-  stopifnot("Extension not in package" = ext_name %in% c("aagi-report", "aagi-short-report"))
+  stopifnot(
+    "Extension not in package" = ext_name %in%
+      c("aagi-report", "aagi-short-report")
+  )
 
-  if(!file.exists("_extensions")) {
+  if (!file.exists("_extensions")) {
     dir.create("_extensions")
     message("Created '_extensions' folder")
   }
 
-  if(!file.exists(paste0("_extensions/", ext_name)) || update) {
-
-    dir.create(paste0("_extensions/", ext_name), recursive = TRUE, showWarnings = FALSE)
+  if (!file.exists(paste0("_extensions/", ext_name)) || update) {
+    dir.create(
+      paste0("_extensions/", ext_name),
+      recursive = TRUE,
+      showWarnings = FALSE
+    )
 
     file.copy(
-      from = system.file(paste0("extdata/_extensions/", ext_name), package = "AAGIQuartoExtra"),
+      from = system.file(
+        paste0("extdata/_extensions/", ext_name),
+        package = "AAGIQuartoExtra"
+      ),
       to = paste0("_extensions/"),
       overwrite = TRUE,
       recursive = TRUE,
       copy.mode = TRUE
     )
-
   }
 
   n_files <- length(dir(paste0("_extensions/", ext_name)))
 
-  if(n_files < 2){
+  if (n_files < 2) {
     message("Extension appears not to have been created")
   } else if (n_files >= 2 && update) {
     message("Extension was updated successfully")
@@ -54,10 +63,10 @@ new_aagi_document <- function(file_name = NULL,
 
   template_lines <- readLines(paste0("_extensions/", ext_name, "/template.qmd"))
 
-  if (university == "UA") {
+  if (university == "AU") {
     template_lines <- gsub(
       "report-series: \".*\"",
-      'report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-UA)"',
+      'report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-AU)"',
       template_lines
     )
     template_lines <- gsub(
@@ -73,7 +82,7 @@ new_aagi_document <- function(file_name = NULL,
     )
     template_lines <- gsub(
       'email: \".*\"',
-      'email: "your.email@curtin.edu.au"',
+      'email: "cbada@curtin.edu.au"',
       template_lines
     )
   } else if (university == "UQ") {
@@ -89,7 +98,10 @@ new_aagi_document <- function(file_name = NULL,
     )
   }
 
-  writeLines(text = template_lines, con = paste0(file_name, ".qmd", collapse = ""))
+  writeLines(
+    text = template_lines,
+    con = paste0(file_name, ".qmd", collapse = "")
+  )
 
   rstudioapi::navigateToFile(paste0(file_name, ".qmd", collapse = ""))
 }
