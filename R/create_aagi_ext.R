@@ -13,17 +13,21 @@
 #'
 #' @return a message if extension was successfully copied over
 #' @export
-create_aagi_ext <- function(file_name = NULL,
-                            ext_name = "aagi-report",
-                            university = "UA",
-                            path = ".") {
-
+create_aagi_ext <- function(
+  file_name = NULL,
+  ext_name = "aagi-report",
+  university = "AU",
+  path = "."
+) {
   if (is.null(file_name)) {
     stop("You must provide a valid file_name")
   }
 
   ext_dir <- fs::path(path, "_extensions")
-  if(!file.exists(ext_dir)) dir.create(ext_dir, recursive = TRUE, showWarnings = FALSE)
+
+  if (!file.exists(ext_dir)) {
+    dir.create(ext_dir, recursive = TRUE, showWarnings = FALSE)
+  }
 
   ext_yml <- readLines(system.file(paste0("extdata/_extensions/", ext_name, "/_extension.yml"),
     package = "AAGIQuartoExtra"
@@ -59,10 +63,10 @@ create_aagi_ext <- function(file_name = NULL,
 
   template_lines <- readLines(paste0(ext_dir, "/", ext_name, "/template.qmd"))
 
-  if (university == "UA") {
+  if (university == "AU") {
     template_lines <- gsub(
       "report-series: \".*\"",
-      'report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-UA)"',
+      'report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-AU)"',
       template_lines
     )
     template_lines <- gsub(
@@ -78,7 +82,7 @@ create_aagi_ext <- function(file_name = NULL,
     )
     template_lines <- gsub(
       'email: \".*\"',
-      'email: "your.email@curtin.edu.au"',
+      'email: "cbada@curtin.edu.au"',
       template_lines
     )
   } else if (university == "UQ") {
@@ -92,7 +96,12 @@ create_aagi_ext <- function(file_name = NULL,
       'email: "your.email@uq.edu.au"',
       template_lines
     )
+  } else {
+    stop("University must be one of 'AU', 'CU', or 'UQ'")
   }
 
-  writeLines(text = template_lines, con = paste0(path, "/", file_name, ".qmd"))
+  writeLines(
+    text = template_lines, 
+    con = paste0(path, "/", file_name, ".qmd")
+  )
 }

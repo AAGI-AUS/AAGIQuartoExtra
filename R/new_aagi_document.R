@@ -96,6 +96,8 @@ new_aagi_document <- function(
       'email: "your.email@uq.edu.au"',
       template_lines
     )
+  } else {
+    stop("University must be one of 'AU', 'CU', or 'UQ'")
   }
 
   writeLines(
