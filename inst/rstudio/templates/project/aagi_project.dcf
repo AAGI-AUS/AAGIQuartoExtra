@@ -17,8 +17,8 @@ Position: left
 Parameter: partner
 Widget: SelectInput
 Label: University partner
-Fields: UA, CU, UQ
-Default: UA
+Fields: AU, CU, UQ
+Default: AU
 Position: right
 
 Parameter: doc_type

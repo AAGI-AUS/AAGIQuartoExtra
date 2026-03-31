@@ -7,7 +7,7 @@
 create_aagi_ext(
   file_name = NULL,
   ext_name = "aagi-report",
-  university = "UA",
+  university = "AU",
   path = "."
 )
 }

@@ -3,7 +3,7 @@
 # Modify the following fields as needed
 
 # General Information
-report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-UA)"  # Report series name
+report-series: "Analytics for the Australian Grains Industry - University of Adelaide (AAGI-AU)"  # Report series name
 
 # Document Title and Subtitle
 title: "Informative Title for Report"        # Main title of the report
