@@ -37,8 +37,8 @@ function add_after_title(meta)
 </style>
 <div class="partners-overlay-container">
   <!-- Uncomment the line below to use a local image -->
-  <!-- <img class="project-partner-img" src="_extensions/aagi-report/assets/Project_partner.png" alt="Project Partners"> -->
-  <img class="project-partner-img" src="https://github.com/AAGI-AUS/AAGI-Style-Guide-and-Logos/blob/main/assets/Project_partner.svg?raw=true" alt="Project Partners">
+  <img class="project-partner-img" src="_extensions/aagi-report/assets/Project_partner.svg" alt="Project Partners">
+  <!-- <img class="project-partner-img" src="https://github.com/AAGI-AUS/AAGI-Style-Guide-and-Logos/blob/main/assets/Project_partner.svg?raw=true" alt="Project Partners"> -->
   <img class="extra-partner-img" src="]] .. logo_path .. [[" alt="Partner Logo">
 </div>
 ]]
@@ -56,8 +56,8 @@ function add_after_title(meta)
 </style>
 <div class="aagi-partners-container">
   <!-- Uncomment the line below to use a local image -->
-  <!-- <img src="_extensions/aagi-report/assets/Partners.png" style="max-width: 100%;" /> -->
-  <img src="https://github.com/AAGI-AUS/AAGI-Style-Guide-and-Logos/blob/main/assets/Partners.svg?raw=true" style="max-width: 100%;" />
+  <img src="_extensions/aagi-report/assets/Partners.svg" style="max-width: 100%;" />
+  <!-- <img src="https://github.com/AAGI-AUS/AAGI-Style-Guide-and-Logos/blob/main/assets/Partners.svg?raw=true" style="max-width: 100%;" /> -->
 </div>
 ]]
     return { pandoc.RawBlock('html', html) }
