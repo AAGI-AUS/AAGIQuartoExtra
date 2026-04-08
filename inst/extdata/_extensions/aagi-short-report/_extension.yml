@@ -28,3 +28,5 @@ contributes:
     # ----------------------- DOCX CONFIGURATION --------------------------
     docx:
       reference-doc: assets/template.docx       # Reference DOCX file for formatting
+      filters:
+        - filters/force-no-lof-docx.lua         # Hard-disable LOF for short-report DOCX

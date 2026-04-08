@@ -31,14 +31,11 @@ $endfor$
 \usepackage{graphicx}
 
 % AAGI palette colours
-\definecolor{aagibrightgreen}{HTML}{b6d438}
-\definecolor{aagiteal}{HTML}{00808b}
-\definecolor{aagiblue}{HTML}{648fd2}
-\definecolor{aagigreen}{HTML}{54921e}
-\definecolor{aagiyellow}{HTML}{ffbc42}
-\definecolor{aagiorange}{HTML}{ec8525}
-\definecolor{aagiblack}{HTML}{414042}
-\definecolor{aagigrey}{HTML}{f2f2f2}
+\usepackage{xcolor}
+\definecolor{AAGI}{HTML}{00808b}     % Define primary AAGI color (teal)
+\definecolor{AAGIblue}{HTML}{00808b} % Secondary AAGI blue (same as primary)
+\definecolor{AAGIgreen}{HTML}{b6d438} % AAGI green color for accents
+\definecolor{AAGIblack}{HTML}{414042} % Neutral black for headings and text
 
 % Enable shading (i.e., Shaded environment) if set
 $if(highlighting-macros)$
@@ -186,8 +183,8 @@ $endif$
 % A fancy coloured box for notes/warnings
 \usepackage[most]{tcolorbox}
 \newtcolorbox{note}[1][]{%
-  colback=aagiteal!7, colframe=aagiteal!7, notitle, sharp corners,
-  borderline west={2pt}{0pt}{aagiteal}, borderline east={2pt}{0pt}{aagiteal},
+  colback=AAGI!7, colframe=AAGI!7, notitle, sharp corners,
+  borderline west={2pt}{0pt}{AAGI}, borderline east={2pt}{0pt}{AAGI},
   enhanced, breakable}
 
 % Any other user-defined header inclusions
@@ -199,9 +196,9 @@ $endfor$
 % URL styling
 \hypersetup{%
   colorlinks=true,
-  linkcolor=aagiteal,
-  urlcolor=aagiteal,
-  citecolor=aagiteal}
+  linkcolor=AAGI,
+  urlcolor=AAGI,
+  citecolor=AAGI}
 
  % Hyperref for links/cross-referencing
 \def\sectionautorefname{Section}
@@ -216,6 +213,15 @@ $if(links-as-footnotes)$
 $endif$
 
 \newcommand{\pandocbounded}[1]{#1}
+
+% ---------------------------------------
+% Appendix Setup
+% ---------------------------------------
+\newcommand{\aagiappendix}{%
+  \appendix  % Start appendix section
+  \renewcommand{\thesection}{\Alph{section}}  % Change section numbering to A, B, C, etc.
+  \setcounter{section}{0}  % Reset section counter for appendix
+}
 
 %%% Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
