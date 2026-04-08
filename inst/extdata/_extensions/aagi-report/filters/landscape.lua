@@ -9,10 +9,10 @@ local end_portrait_section = ooxml [[
 <w:p>
   <w:pPr>
     <w:sectPr>
-      <w:headerReference w:type="first" r:id="rId10" />
-      <w:headerReference w:type="default" r:id="rId9" />
-      <w:footerReference w:type="first" r:id="rId11"/>
-      <w:footerReference w:type="default" r:id="rId12"/>
+      <w:headerReference w:type="default" r:id="rId13" />
+      <w:footerReference w:type="default" r:id="rId14" />
+      <w:headerReference w:type="first" r:id="rId15" />
+      <w:footerReference w:type="first" r:id="rId16" />
       <w:titlePg w:val="1" />
     </w:sectPr>
   </w:pPr>
@@ -25,10 +25,10 @@ local end_landscape_section = ooxml [[
   <w:pPr>
     <w:sectPr>
       <w:pgSz w:h="11906" w:w="16838" w:orient="landscape" />
-      <w:headerReference w:type="default" r:id="rId9"/>
-      <w:headerReference w:type="first" r:id="rId9"/>
-      <w:footerReference w:type="default" r:id="rId12"/>
-      <w:footerReference w:type="first" r:id="rId12"/>
+      <w:headerReference w:type="default" r:id="rId13"/>
+      <w:headerReference w:type="first" r:id="rId13"/>
+      <w:footerReference w:type="default" r:id="rId14"/>
+      <w:footerReference w:type="first" r:id="rId14"/>
       <w:titlePg w:val="0" />
     </w:sectPr>
   </w:pPr>
