@@ -26,9 +26,8 @@ create a new AAGI project with the basic structure and template files.
 ![](../reference/figures/create_project_step1.png)
 
 You will be prompted to enter the name of the project, the university
-partner, and the type of document you want to create (\**only
-**aagi-report** is available as of version 0.2.0*). The project will be
-created as a subdirectory in the specified working directory.
+partner, and the type of document you want to create. The project will
+be created as a subdirectory in the specified working directory.
 
 If you are familiar with projects environments, you also have the
 options to set `renv` and python virtual environments in the project.
@@ -91,8 +90,8 @@ your project requirements.
 
 ## 3. Managing Quarto documents
 
-Based on the proposed structure, we should have all documents (e.g. PDF
-or DOCX files) stored within the /doc folder. The
+Based on the proposed structure, we should have all documents (e.g. PDF,
+DOCX, HTML, or PPTX files) stored within the /doc folder. The
 [`setup_docs()`](https://aagi-aus.github.io/AAGIQuartoExtra/reference/setup_docs.md)
 function helps organize your initial `index.qmd` and `_quarto.yml` files
 by renaming and updating their configuration.

@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/AAGI-AUS/AAGIQuartoExtra/blob/master/DESCRIPTION)
 
 Fernandez J (2026). *AAGIQuartoExtra: Facilitates the Creation of AAGI
-Quarto Documents*. R package version 0.8.0,
+Quarto Documents*. R package version 0.9.0,
 <https://github.com/AAGI-AUS/AAGIQuartoExtra>.
 
     @Manual{,
       title = {AAGIQuartoExtra: Facilitates the Creation of AAGI Quarto Documents},
       author = {Javier A. Fernandez},
       year = {2026},
-      note = {R package version 0.8.0},
+      note = {R package version 0.9.0},
       url = {https://github.com/AAGI-AUS/AAGIQuartoExtra},
     }
