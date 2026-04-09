@@ -16,7 +16,8 @@ install_aagi_ext(ext_name = "aagi-report", force = FALSE)
 - ext_name:
 
   String indicating which extension to install. Must be one of
-  "aagi-report" or "aagi-short-report".
+  "aagi-report", "aagi-short-report", "aagi-presentation", or "all" to
+  install/update all bundled extensions.
 
 - force:
 
