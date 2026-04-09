@@ -18,6 +18,28 @@
 aagi_project <- function(path, ...) {
 
   dots <- list(...)
+  bundled_extensions <- c("aagi-report", "aagi-short-report", "aagi-presentation")
+  valid_doc_types <- c(bundled_extensions, "all")
+  doc_type <- dots$doc_type
+
+  if (is.null(doc_type)) {
+    doc_type <- "aagi-report"
+  }
+
+  if (!doc_type %in% valid_doc_types) {
+    stop(
+      "Invalid doc_type. Available options are: ",
+      paste(valid_doc_types, collapse = ", ")
+    )
+  }
+
+  if (identical(doc_type, "all")) {
+    template_ext <- "aagi-report"
+    extra_ext <- setdiff(bundled_extensions, template_ext)
+  } else {
+    template_ext <- doc_type
+    extra_ext <- character(0)
+  }
 
   # Ensure the path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
@@ -32,12 +54,24 @@ aagi_project <- function(path, ...) {
 
   # Create index.qmd file and import extension template
   AAGIQuartoExtra::create_aagi_ext(file_name = "index",
-                                ext_name = dots$doc_type,
+                                ext_name = template_ext,
                                 university = dots$partner,
                                 path = path)
 
+  if (length(extra_ext) > 0) {
+    for (ext in extra_ext) {
+      file.copy(
+        from = system.file(paste0("extdata/_extensions/", ext), package = "AAGIQuartoExtra"),
+        to = fs::path(path, "_extensions"),
+        overwrite = TRUE,
+        recursive = TRUE,
+        copy.mode = TRUE
+      )
+    }
+  }
+
   # Move the references.bib file to the root directory
-  file.copy(from = fs::path(path, "_extensions", dots$doc_type, "references", ext = "bib"),
+  file.copy(from = fs::path(path, "_extensions", template_ext, "references", ext = "bib"),
             to = fs::path(path, "references", ext = "bib"),
             overwrite = TRUE)
 
@@ -50,5 +84,3 @@ aagi_project <- function(path, ...) {
   # Initialize renv
   if (dots$with_renv) renv::init(path)
 }
-
-

@@ -22,10 +22,14 @@ new_aagi_document <- function(
     stop("You must provide a valid file_name")
   }
 
-  stopifnot(
-    "Extension not in package" = ext_name %in%
-      c("aagi-report", "aagi-short-report")
-  )
+  # Validate the extension name
+  valid_extensions <- c("aagi-report", "aagi-short-report", "aagi-presentation")
+  if (!ext_name %in% valid_extensions) {
+    stop(
+      "Invalid extension name. Available extensions are: ",
+      paste(valid_extensions, collapse = ", ")
+    )
+  }
 
   if (!file.exists("_extensions")) {
     dir.create("_extensions")

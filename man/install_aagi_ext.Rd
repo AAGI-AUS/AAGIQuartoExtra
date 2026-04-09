@@ -8,7 +8,8 @@ install_aagi_ext(ext_name = "aagi-report", force = FALSE)
 }
 \arguments{
 \item{ext_name}{String indicating which extension to install. Must be one of
-"aagi-report" or "aagi-short-report".}
+"aagi-report", "aagi-short-report", "aagi-presentation", or "all"
+to install/update all bundled extensions.}
 
 \item{force}{Logical indicating whether to force installation even if the
 extension already exists. Default is FALSE, which will prompt the user
