@@ -22,7 +22,7 @@ In RStudio, you can create a new AAGI Quarto document by clicking on `File -> Ne
 
 ![](../man/figures/create_project_step1.png)
 
-You will be prompted to enter the name of the project, the university partner, and the type of document you want to create (\**only **aagi-report** is available as of version 0.2.0*). The project will be created as a subdirectory in the specified working directory.
+You will be prompted to enter the name of the project, the university partner, and the type of document you want to create. The project will be created as a subdirectory in the specified working directory.
 
 If you are familiar with projects environments, you also have the options to set `renv` and python virtual environments in the project.
 
@@ -42,7 +42,7 @@ If everything is set up correctly, you should be able to work and render AAGI Qu
 
 ## 2. Setting up a folder structure
 
-When learning data analysis, it can be challenging to figure out how to organise files within the created project. It is good practice to establish a comprehensive file organisation structure that helps us to navigate and re-use the project content without losing a huge amount of time searching across lines of codes and files. 
+When learning data analysis, it can be challenging to figure out how to organise files within the created project. It is good practice to establish a comprehensive file organisation structure that helps us to navigate and re-use the project content without losing a huge amount of time searching across lines of codes and files.
 
 We want to use structured projects that will help us understand how files are laid out weeks or months after we’ve last worked on that project. One way is to create sub-folders for specific types of files, such as data, figures, function files, and documents. Using the `setup_folders()` function can help create a standardized folder hierarchy. This function organizes your project with the following folders:
 
@@ -66,7 +66,7 @@ You will see that the function will create the directories in your project root.
 
 ## 3. Managing Quarto documents
 
-Based on the proposed structure, we should have all documents (e.g. PDF or DOCX files) stored within the /doc folder. The `setup_docs()` function helps organize your initial `index.qmd` and `_quarto.yml` files by renaming and updating their configuration. 
+Based on the proposed structure, we should have all documents (e.g. PDF, DOCX, HTML, or PPTX files) stored within the /doc folder. The `setup_docs()` function helps organize your initial `index.qmd` and `_quarto.yml` files by renaming and updating their configuration.
 
 To use this function, simply run:
 
@@ -102,7 +102,7 @@ The numbering system ensures clarity and logical ordering. Another possibility/r
 
 ### Checking for Proxima Nova
 
-The template uses the Proxima Nova font if available. If the font is not installed and you render any document, the package will fall back to Arial font. 
+The template uses the Proxima Nova font if available. If the font is not installed and you render any document, the package will fall back to Arial font.
 
 If you want to check if this font is installed, use:
 
@@ -148,16 +148,14 @@ usethis::use_github(private = TRUE)
 usethis::use_github(organisation = "AAGI-Org-AU", private = TRUE)
 ```
 
-This will create a new private repository on GitHub and link it to your local project. 
+This will create a new private repository on GitHub and link it to your local project.
 
 For detailed steps, I leave you here with a great guide on using Git in R written by Jennifer Bryan: [Happy Git with R guide](https://happygitwithr.com/existing-github-last.html).
 
 ## Conclusion
 
-This vignette has shown you how to create and structure a new project using `AAGIQuartoExtra`. For more details, consult the package documentation. 
+This vignette has shown you how to create and structure a new project using `AAGIQuartoExtra`. For more details, consult the package documentation.
 
 Further work to improve functionality will involve:
 
 - Adding support for other AAGIQuarto templates, such as short reports and presentations.
-
-
